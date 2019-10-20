@@ -23,10 +23,9 @@ export class User extends Entity {
 
   @property({
     type: 'date',
-    required: true,
     default: () => new Date(),
   })
-  createdAt: string;
+  createdAt?: string;
 
   // Define well-known properties here
 
