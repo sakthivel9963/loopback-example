@@ -9,6 +9,7 @@ import {RestApplication} from '@loopback/rest';
 import {ServiceMixin} from '@loopback/service-proxy';
 import * as path from 'path';
 import {MySequence} from './sequence';
+import {middleware} from '@loopback/build';
 
 export class LoopbackExampleApplication extends BootMixin(
   ServiceMixin(RepositoryMixin(RestApplication)),
@@ -37,6 +38,7 @@ export class LoopbackExampleApplication extends BootMixin(
         extensions: ['.controller.js'],
         nested: true,
       },
+      middleware,
     };
   }
 }
